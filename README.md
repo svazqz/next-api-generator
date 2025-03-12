@@ -1,6 +1,6 @@
 # next-api-generator
 
-next-api-generator is an project designed to streamline the development of new Next.js applications and their accompanying documentation. Based on Typescript, Next.js, Zod, ReqctQuery, and the zod-to-openapi library, next-api-generator significantly reduces the overhead typically associated with these processes.
+next-api-generator is an project designed to streamline the development of new Next.js applications and their accompanying documentation. Based on Typescript, Next.js, Zod, ReactQuery, and the zod-to-openapi library, next-api-generator significantly reduces the overhead typically associated with these processes.
 
 ## Getting started
 
@@ -53,7 +53,7 @@ export namespace GeoDefinitions {
 next-api-generator proposes a request/api driven development, this means that all the api endpoins are defined first setting the input, output, params and query formats so when handler function is defined it has access to auto complete features and the same happens with consumer. An example of a request definition can be as follow:
 
 ```typescript
-import { createAPIDefinition } from '@svazqz/next-api-generator/dist/ab-initio';
+import { createAPIDefinition } from '@svazqz/next-api-generator/dist/next-api-generator';
 import { GeoDefinitions } from './schemas';
 
 export const getGeoData = createAPIDefinition({

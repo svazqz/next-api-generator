@@ -5,9 +5,9 @@ import { resolve } from "path";
 import { nodePolyfills } from 'vite-plugin-node-polyfills';
 
 const config = {
-  'ab-initio': {
-    entry: resolve(__dirname, './src/ab-initio.ts'),
-    fileName: (format) => `ab-initio.${format}.js`,
+  'next-api-generator': {
+    entry: resolve(__dirname, './src/next-api-generator.ts'),
+    fileName: (format) => `next-api-generator.${format}.js`,
   },
   client: {
     entry: resolve(__dirname, './src/client.ts'),
@@ -24,7 +24,7 @@ const config = {
 };
 
 
-const currentConfig = config[process?.env?.LIB_NAME || 'ab-initio'];
+const currentConfig = config[process?.env?.LIB_NAME || 'next-api-generator'];
 if (currentConfig === undefined) {
   throw new Error('LIB_NAME is not defined or is not valid');
 }

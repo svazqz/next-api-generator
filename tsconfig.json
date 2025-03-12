@@ -17,8 +17,8 @@
     /* The "typeRoots" configuration specifies the locations where 
        TypeScript looks for type definitions (.d.ts files) to 
        include in the compilation process.*/
-    "typeRoots": ["./dist/ab-initio.d.ts", "./dist/server.d.ts", "./dist/client.d.ts", "node_modules/@types"]
+    "typeRoots": ["./dist/next-api-generator.d.ts", "./dist/server.d.ts", "./dist/client.d.ts", "node_modules/@types"]
   },
   /* include /index.ts*/
-  "include": ["src", "./src/ab-initio.ts", "./src/server.ts", "./src/client.ts"]
+  "include": ["src", "./src/next-api-generator.ts", "./src/server.ts", "./src/client.ts"]
 }

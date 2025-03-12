@@ -3,6 +3,18 @@
   "private": false,
   "description": "A simple way to keep in sync Next api definitions and client types using zod",
   "version": "1.2.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/svazqz/next-api-generator"
+  },
+  "bugs": {
+    "url": "https://github.com/svazqz/next-api-generator/issues"
+  },
+  "author": {
+    "name": "Sergio Vazquez",
+    "email": "alb.vazq+npm@gmail.com",
+    "url": "https://github.com/svazqz"
+  },
   "exports": {
     "./dist/next-api-generator": {
       "import": "./dist/next-api-generator.es.js",

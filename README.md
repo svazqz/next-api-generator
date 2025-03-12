@@ -1,6 +1,6 @@
-# Next-api-generator
+# next-api-generator
 
-Next-api-generator is an project designed to streamline the development of new Next.js applications and their accompanying documentation. Based on Typescript, Next.js, Zod, ReqctQuery, and the zod-to-openapi library, next-api-generator significantly reduces the overhead typically associated with these processes.
+next-api-generator is an project designed to streamline the development of new Next.js applications and their accompanying documentation. Based on Typescript, Next.js, Zod, ReqctQuery, and the zod-to-openapi library, next-api-generator significantly reduces the overhead typically associated with these processes.
 
 ## Getting started
 
@@ -50,10 +50,10 @@ export namespace GeoDefinitions {
 
 ### Request Handler
 
-Next-api-generator proposes a request/api driven development, this means that all the api endpoins are defined first setting the input, output, params and query formats so when handler function is defined it has access to auto complete features and the same happens with consumer. An example of a request definition can be as follow:
+next-api-generator proposes a request/api driven development, this means that all the api endpoins are defined first setting the input, output, params and query formats so when handler function is defined it has access to auto complete features and the same happens with consumer. An example of a request definition can be as follow:
 
 ```typescript
-import { createAPIDefinition } from 'ab-initio/dist/ab-initio';
+import { createAPIDefinition } from 'next-api-generator/dist/ab-initio';
 import { GeoDefinitions } from './schemas';
 
 export const getGeoData = createAPIDefinition({
@@ -77,7 +77,7 @@ export const postGeoData = createAPIDefinition({
 And the used in the next api definition as follows:
 
 ```typescript
-import { apiWrapper } from 'ab-initio/dist/server';
+import { apiWrapper } from 'next-api-generator/dist/server';
 import { getGeoData, postGeoData } from '../../../data/geo/api';
 
 export const GET = apiWrapper(getGeoData, async (request) => {
@@ -112,12 +112,12 @@ export const POST = apiWrapper(
 
 ### Consumer
 
-Next-api-generator consumers are objects based in a request definition that uses react query internally to perform the comunication to the api. Even if api is not implemented in the next app, the definition of it will be helpful to use it on the auto generation of documentation and also the consumers. Here is an example to a consumer using the previous definition:
+next-api-generator consumers are objects based in a request definition that uses react query internally to perform the comunication to the api. Even if api is not implemented in the next app, the definition of it will be helpful to use it on the auto generation of documentation and also the consumers. Here is an example to a consumer using the previous definition:
 
 ```typescript
 'use client';
 import { ChangeEvent, useCallback, useEffect, useState } from 'react';
-import { apiConsumerClient } from 'ab-initio/dist/client';
+import { apiConsumerClient } from 'next-api-generator/dist/client';
 import { Input } from '@next-base/lib-ui';
 import { postGeoData } from 'apps/next-base/data/geo/api';
 

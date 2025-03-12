@@ -1,13 +1,13 @@
 {
-  "name": "next-api-generator",
+  "name": "@svazq/next-api-generator",
   "private": false,
   "description": "A simple way to keep in sync Next api definitions and client types using zod",
   "version": "1.2.1",
   "exports": {
-    "./dist/ab-initio": {
-      "import": "./dist/ab-initio.es.js",
-      "require": "./dist/ab-initio.umd.js",
-      "types": "./dist/ab-initio.d.ts"
+    "./dist/next-api-generator": {
+      "import": "./dist/next-api-generator.es.js",
+      "require": "./dist/next-api-generator.umd.js",
+      "types": "./dist/next-api-generator.d.ts"
     },
     "./dist/server": {
       "import": "./dist/server.es.js",

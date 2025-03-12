@@ -1,6 +1,6 @@
-# Initio
+# Next-api-generator
 
-Initio is an project designed to streamline the development of new applications and their accompanying documentation. Based on Typescript, Next.js, Zod, ReqctQuery, and the zod-to-openapi library—NextBase significantly reduces the overhead typically associated with these processes.
+Next-api-generator is an project designed to streamline the development of new Next.js applications and their accompanying documentation. Based on Typescript, Next.js, Zod, ReqctQuery, and the zod-to-openapi library, next-api-generator significantly reduces the overhead typically associated with these processes.
 
 ## Getting started
 
@@ -14,7 +14,7 @@ Initio is an project designed to streamline the development of new applications 
 
 ### Schema
 
-At the heart of Initio is the Schema, a ZodObject that defines the structure for key elements of an API request, including query parameters, URL parameters, rquest body, and response. This robust schema validation ensures consistency and reliability across your application. The schemas will be located on each app acording to the domain of each app. This way every app can set their own scope foe each schema. An example of this schema could be `app/data/geo/schemas.ts` containing:
+At the heart of next-api-generator is the Schema, a ZodObject that defines the structure for key elements of an API request, including query parameters, URL parameters, rquest body, and response. This robust schema validation ensures consistency and reliability across your application. The schemas will be located on each app acording to the domain of each app. This way every app can set their own scope foe each schema. An example of this schema could be `app/data/geo/schemas.ts` containing:
 
 ```typescript
 /* eslint-disable @typescript-eslint/no-unused-vars */
@@ -50,7 +50,7 @@ export namespace GeoDefinitions {
 
 ### Request Handler
 
-Initio proposes a request/api driven development, this means that all the api endpoins are defined first setting the input, output, params and query formats so when handler function is defined it has access to auto complete features and the same happens with consumer. An example of a request definition can be as follow:
+Next-api-generator proposes a request/api driven development, this means that all the api endpoins are defined first setting the input, output, params and query formats so when handler function is defined it has access to auto complete features and the same happens with consumer. An example of a request definition can be as follow:
 
 ```typescript
 import { createAPIDefinition } from 'ab-initio/dist/ab-initio';
@@ -112,7 +112,7 @@ export const POST = apiWrapper(
 
 ### Consumer
 
-Initio consumers are objects based in a request definition that uses react query internally to perform the comunication to the api. Even if api is not implemented in the next app, the definition of it will be helpful to use it on the auto generation of documentation and also the consumers. Here is an example to a consumer using the previous definition:
+Next-api-generator consumers are objects based in a request definition that uses react query internally to perform the comunication to the api. Even if api is not implemented in the next app, the definition of it will be helpful to use it on the auto generation of documentation and also the consumers. Here is an example to a consumer using the previous definition:
 
 ```typescript
 'use client';

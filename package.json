@@ -2,7 +2,7 @@
   "name": "@svazqz/next-api-generator",
   "private": false,
   "description": "A simple way to keep in sync Next api definitions and client types using zod",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "repository": {
     "type": "git",
     "url": "https://github.com/svazqz/next-api-generator"
@@ -42,7 +42,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && LIB_NAME=ab-initio vite build && LIB_NAME=server vite build && LIB_NAME=client vite build && cp ./src/open-api/index.ts ./dist/open-api.ts",
+    "build": "tsc && LIB_NAME=@svazqz/next-api-generator vite build && LIB_NAME=server vite build && LIB_NAME=client vite build && cp ./src/open-api/index.ts ./dist/open-api.ts",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },

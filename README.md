@@ -53,7 +53,7 @@ export namespace GeoDefinitions {
 next-api-generator proposes a request/api driven development, this means that all the api endpoins are defined first setting the input, output, params and query formats so when handler function is defined it has access to auto complete features and the same happens with consumer. An example of a request definition can be as follow:
 
 ```typescript
-import { createAPIDefinition } from 'next-api-generator/dist/ab-initio';
+import { createAPIDefinition } from '@svazqz/next-api-generator/dist/ab-initio';
 import { GeoDefinitions } from './schemas';
 
 export const getGeoData = createAPIDefinition({
@@ -77,7 +77,7 @@ export const postGeoData = createAPIDefinition({
 And the used in the next api definition as follows:
 
 ```typescript
-import { apiWrapper } from 'next-api-generator/dist/server';
+import { apiWrapper } from '@svazqz/next-api-generator/dist/server';
 import { getGeoData, postGeoData } from '../../../data/geo/api';
 
 export const GET = apiWrapper(getGeoData, async (request) => {
@@ -117,7 +117,7 @@ next-api-generator consumers are objects based in a request definition that uses
 ```typescript
 'use client';
 import { ChangeEvent, useCallback, useEffect, useState } from 'react';
-import { apiConsumerClient } from 'next-api-generator/dist/client';
+import { apiConsumerClient } from '@svazqz/next-api-generator/dist/client';
 import { Input } from '@next-base/lib-ui';
 import { postGeoData } from 'apps/next-base/data/geo/api';
 
